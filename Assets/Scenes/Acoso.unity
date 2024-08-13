@@ -441,11 +441,11 @@ MonoBehaviour:
   amplitude: 1.2
   frequency: 0.3
   xLimits: {x: 0, y: -12}
-  movementSpeed: 3.9
-  maxAmplitude: 1.3
-  maxFrequency: 0.3
-  maxMovementSpeed: 3.5
-  parameterChangeSpeed: 3
+  movementSpeed: 7
+  maxAmplitude: 0.19
+  maxFrequency: 1
+  maxMovementSpeed: 7.71
+  parameterChangeSpeed: 2.64
 --- !u!114 &1261443485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,8 +721,8 @@ MonoBehaviour:
   frequency: 0.3
   xLimits: {x: 0, y: -12}
   movementSpeed: 3.9
-  maxAmplitude: 1.3
-  maxFrequency: 0.3
+  maxAmplitude: 0.2
+  maxFrequency: 1
   maxMovementSpeed: 3.5
   parameterChangeSpeed: 10
 --- !u!1 &1499951647
@@ -1003,8 +1003,8 @@ MonoBehaviour:
   maxFrequency: 10
   maxMovementSpeed: 2
   parameterChangeSpeed: 10
-  minPoints: 10
-  maxPoints: 100
+  minPoints: 300
+  maxPoints: 40
 --- !u!1 &1537817987
 GameObject:
   m_ObjectHideFlags: 0
