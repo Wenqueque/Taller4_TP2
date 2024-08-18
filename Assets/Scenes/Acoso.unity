@@ -205,7 +205,10 @@ GameObject:
   - component: {fileID: 1261443479}
   - component: {fileID: 1261443478}
   - component: {fileID: 1261443484}
+<<<<<<< Updated upstream
   - component: {fileID: 1261443485}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -433,10 +436,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261443477}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: bc723b5e65c54b04ea4121683e8f3d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myLineRenderer: {fileID: 0}
+=======
+  m_Script: {fileID: 11500000, guid: 254287495ca875c47960e21a2215df30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 1261443482}
+>>>>>>> Stashed changes
   points: 300
   amplitude: 1.2
   frequency: 0.3
@@ -445,6 +455,7 @@ MonoBehaviour:
   maxAmplitude: 0.19
   maxFrequency: 1
   maxMovementSpeed: 7.71
+<<<<<<< Updated upstream
   parameterChangeSpeed: 2.64
 --- !u!114 &1261443485
 MonoBehaviour:
@@ -470,6 +481,9 @@ MonoBehaviour:
   parameterChangeSpeed: 1
   minPoints: 10
   maxPoints: 100
+=======
+  parameterChangeSpeed: 1
+>>>>>>> Stashed changes
 --- !u!1 &1347129103
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,10 +726,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347129103}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: bc723b5e65c54b04ea4121683e8f3d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myLineRenderer: {fileID: 0}
+=======
+  m_Script: {fileID: 11500000, guid: 254287495ca875c47960e21a2215df30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 1347129108}
+>>>>>>> Stashed changes
   points: 300
   amplitude: 1
   frequency: 0.3
@@ -724,7 +745,11 @@ MonoBehaviour:
   maxAmplitude: 0.2
   maxFrequency: 1
   maxMovementSpeed: 3.5
+<<<<<<< Updated upstream
   parameterChangeSpeed: 10
+=======
+  parameterChangeSpeed: 1
+>>>>>>> Stashed changes
 --- !u!1 &1499951647
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +764,10 @@ GameObject:
   - component: {fileID: 1499951650}
   - component: {fileID: 1499951649}
   - component: {fileID: 1499951648}
+<<<<<<< Updated upstream
   - component: {fileID: 1499951654}
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 1499951656}
   m_Layer: 0
   m_Name: SineWave_NARANJA
@@ -959,6 +987,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+<<<<<<< Updated upstream
 --- !u!114 &1499951654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,6 +1010,8 @@ MonoBehaviour:
   maxFrequency: 2
   maxMovementSpeed: 2
   parameterChangeSpeed: 10
+=======
+>>>>>>> Stashed changes
 --- !u!114 &1499951656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,11 +1025,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLineRenderer: {fileID: 1499951652}
+<<<<<<< Updated upstream
   points: 300
   amplitude: 1.2
   frequency: 2
   xLimits: {x: 0, y: -12}
   movementSpeed: 6
+=======
+  points: 293
+  amplitude: 1
+  frequency: 2
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 1
+>>>>>>> Stashed changes
   maxAmplitude: 2
   maxFrequency: 10
   maxMovementSpeed: 2
@@ -1042,8 +1081,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 447, y: 914}
   m_SizeDelta: {x: 318.2903, y: 185.121}
+=======
+  m_AnchoredPosition: {x: 133.2, y: 233.9}
+  m_SizeDelta: {x: 72.0332, y: 38.1378}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537817989
 MonoBehaviour:
@@ -1186,8 +1230,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
+=======
+  m_AnchoredPosition: {x: 7.8999996, y: 0}
+  m_SizeDelta: {x: -37.3661, y: -32.0703}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585317253
 MonoBehaviour:
@@ -1238,10 +1287,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< Updated upstream
   m_fontSize: 72
   m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 1
+=======
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+>>>>>>> Stashed changes
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1274,7 +1330,11 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
+<<<<<<< Updated upstream
   m_margin: {x: 0, y: 0, z: 0, w: 0}
+=======
+  m_margin: {x: -14.494879, y: 0, z: 0, w: 0}
+>>>>>>> Stashed changes
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1543,6 +1603,11 @@ MonoBehaviour:
   maxFrequency: 2
   maxMovementSpeed: 2
   parameterChangeSpeed: 1
+<<<<<<< Updated upstream
+=======
+  edgeCollider: {fileID: 0}
+  linePoints: []
+>>>>>>> Stashed changes
 --- !u!1 &1889653662
 GameObject:
   m_ObjectHideFlags: 0
