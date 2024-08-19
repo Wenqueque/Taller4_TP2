@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098ba4cad889ebc4988b7f14aade6520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: EscenaMenu1
+  sceneName: menu
 --- !u!114 &1993084833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cfc0645fe0c985048829aee554f65328, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7e9fbf869059624a9e41c42e74a941c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
