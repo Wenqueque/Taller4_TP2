@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 1734e1e690ac83f48aa5421fa4b553ca, type: 3}
   maxAmplitude: 1
   zeroDegreesPitch: 1
   zeroDegreesCutoffFrequency: 5000
