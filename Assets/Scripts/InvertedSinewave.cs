@@ -19,6 +19,8 @@ public class InvertedSinewave : MonoBehaviour
     private EdgeCollider2D edgeCollider;
     private List<Vector2> linePoints = new List<Vector2>();
 
+    private SoundController soundController;
+
     void Start()
     {
         myLineRenderer = GetComponent<LineRenderer>();
@@ -67,6 +69,14 @@ public class InvertedSinewave : MonoBehaviour
         amplitude = Mathf.Lerp(amplitude, targetAmplitude, Time.deltaTime * parameterChangeSpeed);
         frequency = Mathf.Lerp(frequency, targetFrequency, Time.deltaTime * parameterChangeSpeed);
         //movementSpeed = Mathf.Lerp(movementSpeed, targetMovementSpeed, Time.deltaTime * parameterChangeSpeed);
+
+        // Ajustar el sonido en función de la amplitud y el movimiento de la sinusoide
+        if (soundController != null)
+        {
+            // Intensificar el sonido basado en la amplitud y la velocidad de movimiento
+            float soundIntensity = amplitude * movementSpeed; 
+            soundController.SetAmplitude(Mathf.Clamp(soundIntensity, 0, maxAmplitude));
+        }
 
         Draw();
     }
