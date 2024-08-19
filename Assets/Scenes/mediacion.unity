@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 179298080}
   - component: {fileID: 179298079}
   - component: {fileID: 179298084}
+  - component: {fileID: 179298085}
   m_Layer: 0
   m_Name: SineWave_VIOLETA
   m_TagString: Untagged
@@ -429,6 +430,24 @@ MonoBehaviour:
   frequency: 1
   xLimits: {x: 0, y: -12}
   movementSpeed: 1
+--- !u!114 &179298085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179298078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &513033589
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +564,7 @@ GameObject:
   - component: {fileID: 531499597}
   - component: {fileID: 531499596}
   - component: {fileID: 531499601}
+  - component: {fileID: 531499602}
   m_Layer: 0
   m_Name: SineWave_CELESTE
   m_TagString: Untagged
@@ -763,6 +783,24 @@ MonoBehaviour:
   frequency: 3
   xLimits: {x: 0, y: -15}
   movementSpeed: 1
+--- !u!114 &531499602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531499595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &567631833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1234,7 @@ GameObject:
   - component: {fileID: 1448667014}
   - component: {fileID: 1448667013}
   - component: {fileID: 1448667018}
+  - component: {fileID: 1448667019}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -1414,6 +1453,24 @@ MonoBehaviour:
   frequency: 1
   xLimits: {x: 0, y: -12}
   movementSpeed: 1
+--- !u!114 &1448667019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448667012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &1738306738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,6 +1485,7 @@ GameObject:
   - component: {fileID: 1738306740}
   - component: {fileID: 1738306739}
   - component: {fileID: 1738306744}
+  - component: {fileID: 1738306745}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -1646,6 +1704,24 @@ MonoBehaviour:
   frequency: 10
   xLimits: {x: 0, y: -12}
   movementSpeed: 10
+--- !u!114 &1738306745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738306738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &1834349314
 GameObject:
   m_ObjectHideFlags: 0

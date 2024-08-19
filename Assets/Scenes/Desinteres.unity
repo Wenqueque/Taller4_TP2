@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 655946073}
   - component: {fileID: 655946072}
   - component: {fileID: 655946075}
+  - component: {fileID: 655946076}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -487,6 +488,24 @@ MonoBehaviour:
   frequency: 0.45
   xLimits: {x: 0, y: -12}
   movementSpeed: 2.7
+--- !u!114 &655946076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655946070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &1000891766
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +809,7 @@ GameObject:
   - component: {fileID: 1562242825}
   - component: {fileID: 1562242824}
   - component: {fileID: 1562242822}
+  - component: {fileID: 1562242827}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -949,6 +969,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1562242827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562242821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &1906743768
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +999,7 @@ GameObject:
   - component: {fileID: 1906743771}
   - component: {fileID: 1906743770}
   - component: {fileID: 1906743773}
+  - component: {fileID: 1906743774}
   m_Layer: 0
   m_Name: SineWave_CELESTE
   m_TagString: Untagged
@@ -1120,6 +1159,24 @@ MonoBehaviour:
   frequency: 0.38
   xLimits: {x: 0, y: -12}
   movementSpeed: 2
+--- !u!114 &1906743774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906743768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  maxAmplitude: 1
+  zeroDegreesPitch: 1
+  zeroDegreesCutoffFrequency: 5000
+  ninetyDegreesPitch: 1.5
+  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &1981796397
 GameObject:
   m_ObjectHideFlags: 0
