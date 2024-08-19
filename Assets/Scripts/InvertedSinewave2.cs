@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SinewaveAumentar : MonoBehaviour
+public class InvertedSinewave2 : MonoBehaviour
 {
     public LineRenderer myLineRenderer;
     public int points;
@@ -27,7 +27,7 @@ public class SinewaveAumentar : MonoBehaviour
     {
         myLineRenderer = GetComponent<LineRenderer>();
 
-        // AÃ±adir y configurar el EdgeCollider2D
+        // Añadir y configurar el EdgeCollider2D
         edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
         edgeCollider.edgeRadius = 0.1f;
 
@@ -36,15 +36,18 @@ public class SinewaveAumentar : MonoBehaviour
         audioSource.playOnAwake = true;
         audioSource.loop = true;
 
-        // AÃ±adir y configurar el filtro de paso bajo
-        lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
-        lowPassFilter.cutoffFrequency = 5000f; // Puedes ajustar este valor para suavizar mÃ¡s el sonido
+        // Asignar el clip de sonido
+        audioSource.clip = Resources.Load<AudioClip>("sonido2"); // Asegúrate de que el archivo está en la carpeta Resources
 
-        // Dibujar la lÃ­nea inicialmente
+        // Añadir y configurar el filtro de paso bajo
+        lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
+        lowPassFilter.cutoffFrequency = 5000f; // Puedes ajustar este valor para suavizar más el sonido
+
+        // Dibujar la línea inicialmente
         Draw();
 
-        // Iniciar la generaciÃ³n del sonido
-        StartCoroutine(GenerateTone());
+        // Iniciar la reproducción del sonido
+        audioSource.Play();
     }
 
     void Draw()
@@ -71,13 +74,13 @@ public class SinewaveAumentar : MonoBehaviour
 
     void Update()
     {
-        // Obtener la posiciÃ³n del mouse en el eje X
-        float mousePositionX = Input.mousePosition.x / Screen.width; // Normaliza la posiciÃ³n entre 0 y 1
+        // Obtener la posición del mouse en el eje X
+        float mousePositionX = Input.mousePosition.x / Screen.width; // Normaliza la posición entre 0 y 1
 
-        // Ajustar los valores objetivo basados en la posiciÃ³n del mouse
+        // Ajustar los valores objetivo basados en la posición del mouse
         float targetAmplitude = Mathf.Lerp(0, maxAmplitude, mousePositionX);
 
-        // Suavizar la transiciÃ³n a los valores objetivo para la amplitud
+        // Suavizar la transición a los valores objetivo para la amplitud
         amplitude = Mathf.Lerp(amplitude, targetAmplitude, Time.deltaTime * parameterChangeSpeed);
 
         // Mantener los valores actuales para frecuencia y velocidad de movimiento
@@ -93,11 +96,8 @@ public class SinewaveAumentar : MonoBehaviour
 
     void AdjustSound()
     {
-        // Ajustar la frecuencia del tono segÃºn la velocidad de movimiento
-        audioSource.pitch = 1f + movementSpeed / maxMovementSpeed; // Ajusta el rango de pitch segÃºn sea necesario
-
-        // Ajustar el volumen segÃºn la amplitud, con un comportamiento inverso
-        audioSource.volume = Mathf.Lerp(0.5f, 0f, amplitude / maxAmplitude); // 0.5f es el volumen intermedio
+        // Ajustar el volumen según la amplitud, con un comportamiento inverso
+        audioSource.volume = Mathf.Lerp(0.0f, 1.0f, amplitude / maxAmplitude); // Ajusta el rango según sea necesario
     }
 
     IEnumerator GenerateTone()
@@ -107,7 +107,7 @@ public class SinewaveAumentar : MonoBehaviour
             float increment = baseFrequency * Mathf.Pow(2, audioSource.pitch - 1) / AudioSettings.outputSampleRate;
             float phase = 0f;
 
-            float[] data = new float[1024]; // Aumentamos la resoluciÃ³n
+            float[] data = new float[1024]; // Aumentamos la resolución
             for (int i = 0; i < data.Length; i++)
             {
                 data[i] = Mathf.Sin(2 * Mathf.PI * phase);
