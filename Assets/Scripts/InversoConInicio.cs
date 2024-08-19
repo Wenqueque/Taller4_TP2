@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParaSoberbia : MonoBehaviour
+public class InversoConInicio : MonoBehaviour
 {
     public LineRenderer myLineRenderer;
-    public int points = 50;
+    public int points;
     public float amplitude = 1;
     public float frequency = 1;
     public Vector2 xLimits = new Vector2(0, 1);
     public float movementSpeed = 1;
 
-    // Parámetros para 0 grados
     public float maxAmplitude0 = 2;
     public float maxFrequency0 = 2;
     public float maxMovementSpeed0 = 2;
-    public int points0 = 10;
+    public int points0 = 50;
 
-    // Parámetros para 90 grados
     public float maxAmplitude90 = 1;
     public float maxFrequency90 = 1;
     public float maxMovementSpeed90 = 1;
@@ -34,7 +32,7 @@ public class ParaSoberbia : MonoBehaviour
 
         // Añadir y configurar el EdgeCollider2D
         edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
-        edgeCollider.edgeRadius = 0.1f; // Ajusta el tamaño del colisionador según sea necesario
+        edgeCollider.edgeRadius = 0.1f;
 
         // Dibujar la línea inicialmente
         Draw();
@@ -77,7 +75,7 @@ public class ParaSoberbia : MonoBehaviour
         amplitude = Mathf.Lerp(amplitude, targetAmplitude, Time.deltaTime * parameterChangeSpeed);
         frequency = Mathf.Lerp(frequency, targetFrequency, Time.deltaTime * parameterChangeSpeed);
         //movementSpeed = Mathf.Lerp(movementSpeed, targetMovementSpeed, Time.deltaTime * parameterChangeSpeed);
-        //points = Mathf.RoundToInt(Mathf.Lerp(points, targetPoints, Time.deltaTime * parameterChangeSpeed));
+        points = Mathf.RoundToInt(Mathf.Lerp(points, targetPoints, Time.deltaTime * parameterChangeSpeed));
 
         Draw();
     }

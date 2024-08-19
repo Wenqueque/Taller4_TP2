@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 1454209944}
   - component: {fileID: 1454209943}
   - component: {fileID: 1454209942}
+  - component: {fileID: 1454209946}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -546,7 +547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454209941}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 254287495ca875c47960e21a2215df30, type: 3}
   m_Name: 
@@ -695,6 +696,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1454209946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454209941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8d2715718b0dc4193520002ee00b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 1454209944}
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 8
+  maxAmplitude0: 0.19
+  maxFrequency0: 1
+  maxMovementSpeed0: 7.71
+  points0: 300
+  maxAmplitude90: 0.1
+  maxFrequency90: 1.42
+  maxMovementSpeed90: 7.71
+  points90: 300
+  parameterChangeSpeed: 2.64
 --- !u!1 &1789318158
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,18 +955,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ef510e166338d44927ea2ec09de85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 0}
-  points: 293
+  myLineRenderer: {fileID: 1789318162}
+  points: 300
   amplitude: 1
   frequency: 2
   xLimits: {x: 0, y: -12}
-  movementSpeed: 1
-  maxAmplitude: 2
-  maxFrequency: 10
-  maxMovementSpeed: 2
+  movementSpeed: 1.7
+  maxAmplitude0: 0.19
+  maxFrequency0: 1
+  maxMovementSpeed0: 10
+  points0: 300
+  maxAmplitude90: 2
+  maxFrequency90: 0.15
+  maxMovementSpeed90: 1
+  points90: 300
   parameterChangeSpeed: 10
-  minPoints: 300
-  maxPoints: 300
 --- !u!1 &1804091225
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +982,7 @@ GameObject:
   - component: {fileID: 1804091228}
   - component: {fileID: 1804091227}
   - component: {fileID: 1804091226}
+  - component: {fileID: 1804091230}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -965,7 +997,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804091225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 254287495ca875c47960e21a2215df30, type: 3}
   m_Name: 
@@ -1114,6 +1146,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1804091230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804091225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8d2715718b0dc4193520002ee00b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 1804091228}
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 5
+  maxAmplitude0: 0.19
+  maxFrequency0: 0.9
+  maxMovementSpeed0: 2
+  points0: 300
+  maxAmplitude90: 0.1
+  maxFrequency90: 1.42
+  maxMovementSpeed90: 3.5
+  points90: 300
+  parameterChangeSpeed: 10
 --- !u!1 &1993084830
 GameObject:
   m_ObjectHideFlags: 0
