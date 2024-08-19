@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 8300000, guid: 1734e1e690ac83f48aa5421fa4b553ca, type: 3}
+  soundClip: {fileID: 8300000, guid: f975db53e0796594fbd14509231d0205, type: 3}
   maxAmplitude: 1
   zeroDegreesPitch: 1
   zeroDegreesCutoffFrequency: 5000
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789318158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804091225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 

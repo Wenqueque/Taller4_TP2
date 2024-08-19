@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Soberbia.unity
     guid: 0593e7e10c8085649ba426468fb294ab
+  - enabled: 1
+    path: Assets/Scenes/timidez.unity
+    guid: 4b10aa89cbdf7714395db5e52c84ed55
   m_configObjects: {}
