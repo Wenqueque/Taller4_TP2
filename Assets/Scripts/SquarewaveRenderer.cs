@@ -50,8 +50,8 @@ public class SquarewaveRenderer : MonoBehaviour
             float progress = (float)currentPoint / (points - 1);
             float x = Mathf.Lerp(xStart, xFinish, progress);
             
-            // Generar una onda cuadrada
-            float y = ((Time.timeSinceLevelLoad * movementSpeed) % squareWavePeriod < halfPeriod) ? amplitude : -amplitude;
+            // Generar una onda cuadrada en el tiempo basado en la posición
+            float y = Mathf.Sign(Mathf.Sin((x * frequency * 2 * Mathf.PI) + (Time.timeSinceLevelLoad * movementSpeed))) * amplitude;
 
             myLineRenderer.SetPosition(currentPoint, new Vector3(x, y, 0));
             linePoints.Add(new Vector2(x, y));
