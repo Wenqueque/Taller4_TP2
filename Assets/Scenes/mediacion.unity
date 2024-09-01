@@ -197,257 +197,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70815332}
   m_CullTransparentMesh: 1
---- !u!1 &179298078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 179298083}
-  - component: {fileID: 179298082}
-  - component: {fileID: 179298081}
-  - component: {fileID: 179298080}
-  - component: {fileID: 179298079}
-  - component: {fileID: 179298084}
-  - component: {fileID: 179298085}
-  m_Layer: 0
-  m_Name: SineWave_VIOLETA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &179298079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeaa19b7d7e86e24c9528a12bb3df4bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!68 &179298080
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.5000001, y: 0}
-  - {x: 1.5000004, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!114 &179298081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff207ede9a700a4689fcf1a178d0b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 179298082}
-  points: 300
-  amplitude: 0.1
-  frequency: 0.06
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 1.5
---- !u!120 &179298082
-LineRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
-  m_Parameters:
-    serializedVersion: 3
-    widthMultiplier: 1
-    widthCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.09218216
-        value: 0.1194973
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    colorGradient:
-      serializedVersion: 2
-      key0: {r: 0.36496705, g: 0.2117647, b: 1, a: 1}
-      key1: {r: 0.36496705, g: 0.2117647, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 1}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 40670
-      atime2: 65535
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_ColorSpace: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 3
-    numCornerVertices: 0
-    numCapVertices: 0
-    alignment: 0
-    textureMode: 0
-    textureScale: {x: 1, y: 1}
-    shadowBias: 0.5
-    generateLightingData: 0
-  m_MaskInteraction: 0
-  m_UseWorldSpace: 0
-  m_Loop: 0
-  m_ApplyActiveColorSpace: 1
---- !u!4 &179298083
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &179298084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5deacc3e17a540545b537c648c4b256d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 179298082}
-  points: 300
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 1
---- !u!114 &179298085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179298078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundClip: {fileID: 0}
-  maxAmplitude: 1
-  zeroDegreesPitch: 1
-  zeroDegreesCutoffFrequency: 5000
-  ninetyDegreesPitch: 1.5
-  ninetyDegreesCutoffFrequency: 2000
 --- !u!1 &513033589
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,11 +309,10 @@ GameObject:
   m_Component:
   - component: {fileID: 531499600}
   - component: {fileID: 531499599}
-  - component: {fileID: 531499598}
   - component: {fileID: 531499597}
   - component: {fileID: 531499596}
-  - component: {fileID: 531499601}
   - component: {fileID: 531499602}
+  - component: {fileID: 531499603}
   m_Layer: 0
   m_Name: SineWave_CELESTE
   m_TagString: Untagged
@@ -625,24 +373,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &531499598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531499595}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff207ede9a700a4689fcf1a178d0b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 531499599}
-  points: 300
-  amplitude: 0.2
-  frequency: 0.05
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 2
 --- !u!120 &531499599
 LineRenderer:
   serializedVersion: 2
@@ -765,24 +495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &531499601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531499595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5deacc3e17a540545b537c648c4b256d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 531499599}
-  points: 300
-  amplitude: 2
-  frequency: 3
-  xLimits: {x: 0, y: -15}
-  movementSpeed: 1
 --- !u!114 &531499602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,7 +502,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531499595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -801,6 +513,30 @@ MonoBehaviour:
   zeroDegreesCutoffFrequency: 5000
   ninetyDegreesPitch: 1.5
   ninetyDegreesCutoffFrequency: 2000
+--- !u!114 &531499603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531499595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e723d80e7e62e4b930b87fe2568b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 531499599}
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 1
+  maxAmplitude: 2
+  maxFrequency: 2
+  maxMovementSpeed: 2
+  parameterChangeSpeed: 1
+  minPoints: 10
+  maxPoints: 100
 --- !u!1 &567631833
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567631835}
   - component: {fileID: 567631834}
+  - component: {fileID: 567631836}
   m_Layer: 0
   m_Name: ColorManajer
   m_TagString: Untagged
@@ -846,6 +583,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567631836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567631833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e121ad683fdde488de0ddd5cd746c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line1: {fileID: 1448667016}
+  line2: {fileID: 531499599}
+  hiddenLineRenderer: {fileID: 1738306742}
+  zeroThreshold: 0.1
 --- !u!1 &625835619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +983,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1448667017}
   - component: {fileID: 1448667016}
-  - component: {fileID: 1448667015}
   - component: {fileID: 1448667014}
   - component: {fileID: 1448667013}
   - component: {fileID: 1448667018}
@@ -1295,24 +1047,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1448667015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448667012}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff207ede9a700a4689fcf1a178d0b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1448667016}
-  points: 300
-  amplitude: 0.2
-  frequency: 0.04
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 2.5
 --- !u!120 &1448667016
 LineRenderer:
   serializedVersion: 2
@@ -1448,7 +1182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLineRenderer: {fileID: 1448667016}
-  points: 500
+  points: 15
   amplitude: 1
   frequency: 1
   xLimits: {x: 0, y: -12}
@@ -1460,7 +1194,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448667012}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -1481,11 +1215,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1738306743}
   - component: {fileID: 1738306742}
-  - component: {fileID: 1738306741}
   - component: {fileID: 1738306740}
   - component: {fileID: 1738306739}
-  - component: {fileID: 1738306744}
   - component: {fileID: 1738306745}
+  - component: {fileID: 1738306747}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -1546,24 +1279,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1738306741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738306738}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff207ede9a700a4689fcf1a178d0b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1738306742}
-  points: 300
-  amplitude: 0.2
-  frequency: 0.03
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 3
 --- !u!120 &1738306742
 LineRenderer:
   serializedVersion: 2
@@ -1686,24 +1401,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1738306744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738306738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5deacc3e17a540545b537c648c4b256d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1738306742}
-  points: 300
-  amplitude: 1
-  frequency: 10
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 10
 --- !u!114 &1738306745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,7 +1408,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738306738}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -1722,6 +1419,27 @@ MonoBehaviour:
   zeroDegreesCutoffFrequency: 5000
   ninetyDegreesPitch: 1.5
   ninetyDegreesCutoffFrequency: 2000
+--- !u!114 &1738306747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738306738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c99ad118e714ea499c4fabc37301bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 1738306742}
+  points: 300
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 1
+  amplitude1: 0.07
+  frequency1: 1.2
+  amplitude2: 1.51
+  frequency2: 1
+  squareWavePeriod: 0.15
 --- !u!1 &1834349314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1516,6 @@ SceneRoots:
   - {fileID: 1448667017}
   - {fileID: 531499600}
   - {fileID: 1738306743}
-  - {fileID: 179298083}
   - {fileID: 567631835}
   - {fileID: 513033593}
   - {fileID: 1834349317}
