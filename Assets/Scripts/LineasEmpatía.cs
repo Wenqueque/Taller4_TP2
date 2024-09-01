@@ -30,6 +30,7 @@ public class LineasEmpatía : MonoBehaviour
     private EdgeCollider2D edgeCollider;
     private List<Vector2> linePoints = new List<Vector2>();
     private bool isCommonSineWave = false; // Para detectar si la línea ha cambiado
+    private bool isDragging = false; // Para detectar si se está arrastrando
 
     void Start()
     {
@@ -94,10 +95,11 @@ public class LineasEmpatía : MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
         {
             isCommonSineWave = true;
+            isDragging = true;
         }
 
         // Ajustar frecuencia con arrastre
-        if (Input.GetMouseButton(0) || Input.touchCount > 0)
+        if (isDragging)
         {
             Vector2 touchPosition = Input.mousePosition;
             float normalizedX = Mathf.InverseLerp(0, Screen.width, touchPosition.x);
@@ -108,6 +110,12 @@ public class LineasEmpatía : MonoBehaviour
             {
                 frequency = newFrequency * frequencyDragMultiplier;
             }
+        }
+
+        // Cambiar el estado de arrastre cuando se deja de tocar la pantalla
+        if (Input.GetMouseButtonUp(0) || Input.touchCount == 0)
+        {
+            isDragging = false;
         }
 
         // Obtener la rotación del dispositivo
@@ -121,7 +129,6 @@ public class LineasEmpatía : MonoBehaviour
 
         // Suavizar la transición a los valores objetivo
         amplitude = Mathf.Lerp(amplitude, targetAmplitude, Time.deltaTime * parameterChangeSpeed);
-        frequency = Mathf.Lerp(frequency, targetFrequency, Time.deltaTime * parameterChangeSpeed);
         movementSpeed = Mathf.Lerp(movementSpeed, targetMovementSpeed, Time.deltaTime * parameterChangeSpeed);
         points = Mathf.RoundToInt(Mathf.Lerp(points, targetPoints, Time.deltaTime * parameterChangeSpeed));
 
