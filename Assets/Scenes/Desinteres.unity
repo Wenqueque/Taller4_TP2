@@ -628,7 +628,7 @@ MonoBehaviour:
   xLimits: {x: 0, y: -12}
   movementSpeed: 1
   maxAmplitude0: 0.2
-  maxAmplitude90: 5
+  maxAmplitude90: 2
   parameterChangeSpeed: 0.17
 --- !u!114 &1273042502
 MonoBehaviour:
@@ -946,8 +946,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0949707
-        value: 0.100631714
+        time: 0.10527943
+        value: 0.18109567
         inSlope: 0
         outSlope: 0
         tangentMode: 0
