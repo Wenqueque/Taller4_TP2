@@ -863,6 +863,15 @@ MonoBehaviour:
   frequency: 1
   xLimits: {x: 0, y: -12}
   movementSpeed: 1
+  maxAmplitude0: 1
+  maxFrequency0: 1
+  maxMovementSpeed0: 1
+  points0: 300
+  maxAmplitude90: 5
+  maxFrequency90: 5
+  maxMovementSpeed90: 5
+  points90: 300
+  parameterChangeSpeed: 1
   minFrequency: 0.1
   maxFrequency: 2
   frequencyDragMultiplier: 1

@@ -11,15 +11,21 @@ public class LineasEmpatía : MonoBehaviour
     public Vector2 xLimits = new Vector2(0, 1);
     public float movementSpeed = 1;
 
-    // Variables para ajustar la frecuencia con el arrastre
-    public float minFrequency = 0.1f;
-    public float maxFrequency = 5f;
-    public float frequencyDragMultiplier = 10f;
+    // Parámetros para el ajuste basado en la rotación
+    public float maxAmplitude0 = 1;
+    public float maxFrequency0 = 1;
+    public float maxMovementSpeed0 = 1;
+    public int points0 = 50;
 
-    // Variables para ajustar la amplitud
-    public float minAmplitude = 0.1f;
-    public float maxAmplitude = 5f;
-    public float amplitudeChangeSpeed = 1f; // Velocidad del cambio de amplitud
+    public float maxAmplitude90 = 5;
+    public float maxFrequency90 = 5;
+    public float maxMovementSpeed90 = 5;
+    public int points90 = 100;
+
+    public float parameterChangeSpeed = 1;
+    public float minFrequency = 0.1f; // Frecuencia mínima para el arrastre
+    public float maxFrequency = 10f; // Frecuencia máxima para el arrastre
+    public float frequencyDragMultiplier = 10f; // Multiplicador para ajustar la frecuencia con el arrastre
 
     private EdgeCollider2D edgeCollider;
     private List<Vector2> linePoints = new List<Vector2>();
@@ -90,20 +96,10 @@ public class LineasEmpatía : MonoBehaviour
             isCommonSineWave = true;
         }
 
-        if (isCommonSineWave)
-        {
-            DrawSineWave();
-        }
-        else
-        {
-            DrawSquareWave();
-        }
-
         // Ajustar frecuencia con arrastre
         if (Input.GetMouseButton(0) || Input.touchCount > 0)
         {
             Vector2 touchPosition = Input.mousePosition;
-            // Convertir la posición del ratón o toque a la posición de la pantalla
             float normalizedX = Mathf.InverseLerp(0, Screen.width, touchPosition.x);
             float newFrequency = Mathf.Lerp(minFrequency, maxFrequency, normalizedX);
 
@@ -114,11 +110,29 @@ public class LineasEmpatía : MonoBehaviour
             }
         }
 
-        // Leer valores del giroscopio para ajustar la amplitud
-        float gyroRotationY = Input.gyro.rotationRateUnbiased.y; // Obtener la rotación del giroscopio en el eje Y
+        // Obtener la rotación del dispositivo
+        float rotation = Mathf.Clamp01(Mathf.Abs(Input.acceleration.x)); // Ajustar según el eje deseado, clamping entre 0 y 1
 
-        // Convertir la rotación del giroscopio en un valor entre 0 y 1 (para interpolar entre min y max amplitud)
-        float normalizedRotation = Mathf.InverseLerp(-0.5f, 0.5f, gyroRotationY); // Ajustar el rango según sea necesario
-        amplitude = Mathf.Lerp(minAmplitude, maxAmplitude, normalizedRotation);
+        // Interpolar los valores objetivo entre los configurados para 0 grados y 90 grados
+        float targetAmplitude = Mathf.Lerp(maxAmplitude0, maxAmplitude90, rotation);
+        float targetFrequency = Mathf.Lerp(maxFrequency0, maxFrequency90, rotation);
+        float targetMovementSpeed = Mathf.Lerp(maxMovementSpeed0, maxMovementSpeed90, rotation);
+        int targetPoints = Mathf.RoundToInt(Mathf.Lerp(points0, points90, rotation));
+
+        // Suavizar la transición a los valores objetivo
+        amplitude = Mathf.Lerp(amplitude, targetAmplitude, Time.deltaTime * parameterChangeSpeed);
+        frequency = Mathf.Lerp(frequency, targetFrequency, Time.deltaTime * parameterChangeSpeed);
+        movementSpeed = Mathf.Lerp(movementSpeed, targetMovementSpeed, Time.deltaTime * parameterChangeSpeed);
+        points = Mathf.RoundToInt(Mathf.Lerp(points, targetPoints, Time.deltaTime * parameterChangeSpeed));
+
+        // Dibujar la línea
+        if (isCommonSineWave)
+        {
+            DrawSineWave();
+        }
+        else
+        {
+            DrawSquareWave();
+        }
     }
 }
