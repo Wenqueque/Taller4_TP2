@@ -492,8 +492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLineRenderer: {fileID: 1149047243}
-  increaseAmount: 0.08
-  points: 300
+  increaseAmount: -0.03
+  points: 250
   amplitude: 1
   frequency: 1
   xLimits: {x: 0, y: -12}
@@ -507,8 +507,8 @@ MonoBehaviour:
   maxMovementSpeed90: 7.71
   points90: 300
   additionalMaxAmplitude90: 0.1
-  additionalMaxFrequency90: 0.5
-  additionalMaxMovementSpeed90: 7.71
+  additionalMaxFrequency90: 0.8
+  additionalMaxMovementSpeed90: 5
   additionalPoints90: 300
   parameterChangeSpeed: 2.64
 --- !u!114 &1149047241
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921759609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -1065,6 +1065,9 @@ MonoBehaviour:
   additionalMaxFrequency90: 0.5
   additionalMaxMovementSpeed90: 5
   additionalPoints90: 300
+  draggingColor: {r: 0, g: 0, b: 0, a: 1}
+  defaultColor: {r: 0.31764707, g: 0.98039216, b: 1, a: 1}
+  colorChangeSpeed: 2
   parameterChangeSpeed: 10
 --- !u!1 &2045971941
 GameObject:

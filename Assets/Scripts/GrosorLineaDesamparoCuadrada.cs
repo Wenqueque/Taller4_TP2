@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GrosorLineaDesamparoCuadrada : MonoBehaviour
+
 {
     public LineRenderer myLineRenderer;
     public float increaseAmount = 0.1f; // Cantidad que aumentará el grosor
@@ -23,11 +24,15 @@ public class GrosorLineaDesamparoCuadrada : MonoBehaviour
     public float maxMovementSpeed90 = 1;
     public int points90 = 100;
 
-    // Nuevos parámetros para cuando está en 90 grados y hasIncreased es verdadero
     public float additionalMaxAmplitude90 = 3;
     public float additionalMaxFrequency90 = 3;
     public float additionalMaxMovementSpeed90 = 3;
     public int additionalPoints90 = 150;
+
+    // Parámetros para cambiar el color
+    public Color draggingColor = Color.red;
+    public Color defaultColor = Color.white;
+    public float colorChangeSpeed = 2f; // Velocidad de cambio de color
 
     public float parameterChangeSpeed = 1;
 
@@ -40,19 +45,20 @@ public class GrosorLineaDesamparoCuadrada : MonoBehaviour
     void Start()
     {
         myLineRenderer = GetComponent<LineRenderer>();
+        myLineRenderer.startColor = defaultColor;
+        myLineRenderer.endColor = defaultColor;
 
         // Añadir y configurar el EdgeCollider2D
         edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
         edgeCollider.edgeRadius = 0.1f;
 
-        // Dibujar la línea inicialmente
+        // Inicializar el dibujo
         Draw();
     }
 
     void Draw()
     {
         float xStart = xLimits.x;
-        float Tau = 2 * Mathf.PI;
         float xFinish = xLimits.y;
 
         myLineRenderer.positionCount = points;
@@ -62,7 +68,9 @@ public class GrosorLineaDesamparoCuadrada : MonoBehaviour
         {
             float progress = (float)currentPoint / (points - 1);
             float x = Mathf.Lerp(xStart, xFinish, progress);
-            float y = amplitude * Mathf.Sign(Mathf.Sin((Tau * frequency * x) + (Time.timeSinceLevelLoad * movementSpeed)));
+
+            // Onda cuadrada
+            float y = Mathf.Sign(Mathf.Sin(2 * Mathf.PI * frequency * x + Time.timeSinceLevelLoad * movementSpeed)) * amplitude;
             myLineRenderer.SetPosition(currentPoint, new Vector3(x, y, 0));
             linePoints.Add(new Vector2(x, y));
         }
@@ -86,6 +94,22 @@ public class GrosorLineaDesamparoCuadrada : MonoBehaviour
 
         // Detectar si se está arrastrando la línea
         isDragging = Input.GetMouseButton(0); // Verifica si el botón del mouse está presionado
+
+        // Cambiar el color si se está arrastrando
+        if (isDragging)
+        {
+            Color currentStartColor = myLineRenderer.startColor;
+            Color currentEndColor = myLineRenderer.endColor;
+
+            Color targetColor = Color.Lerp(currentStartColor, draggingColor, Time.deltaTime * colorChangeSpeed);
+            myLineRenderer.startColor = targetColor;
+            myLineRenderer.endColor = targetColor;
+        }
+        else if (hasIncreased)
+        {
+            // Si se suelta la línea, mantener el color cambiado
+            defaultColor = myLineRenderer.startColor;
+        }
 
         // Obtener la rotación del dispositivo
         float rotation = Mathf.Clamp01(Mathf.Abs(Input.acceleration.x)); // Ajustar según el eje deseado, clamping entre 0 y 1
