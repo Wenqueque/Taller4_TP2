@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OndaCompuesta : MonoBehaviour
+public class OndaCompuestaMediacion : MonoBehaviour
 {
     public LineRenderer myLineRenderer;
     public int points = 100;
@@ -10,13 +10,12 @@ public class OndaCompuesta : MonoBehaviour
     public float movementSpeed = 1;
 
     // Parámetros para las diferentes componentes de la onda
-    public float amplitude1 = 1;   // Amplitud de la onda sinusoidal
-    public float frequency1 = 0.5f;   // Frecuencia de la onda sinusoidal (más baja para patrones más separados)
-    public float phase1 = 0;       // Fase de la onda sinusoidal
+    public float amplitude1 = 1f;     // Amplitud de la onda sinusoidal principal
+    public float frequency1 = 1f;     // Frecuencia de la onda sinusoidal principal
 
     public float amplitude2 = 0.5f;   // Amplitud de la onda cuadrada
-    public float frequency2 = 5;      // Frecuencia de la onda cuadrada
-    public float phase2 = 0;          // Fase de la onda cuadrada
+    public float frequency2 = 5f;     // Frecuencia de la onda cuadrada
+    public float squareWavePeriod = 0.25f; // Proporción de la onda que se asemeja a una onda cuadrada
 
     private EdgeCollider2D edgeCollider;
     private List<Vector2> linePoints = new List<Vector2>();
@@ -47,13 +46,17 @@ public class OndaCompuesta : MonoBehaviour
             float progress = (float)currentPoint / (points - 1);
             float x = Mathf.Lerp(xStart, xFinish, progress);
 
-            // Crear una onda sinusoidal
-            float ySin = amplitude1 * Mathf.Sin(Tau * frequency1 * x + phase1 + (Time.timeSinceLevelLoad * movementSpeed));
+            // Onda sinusoidal principal (larga)
+            float ySin = amplitude1 * Mathf.Sin(Tau * frequency1 * x + (Time.timeSinceLevelLoad * movementSpeed));
 
-            // Crear una onda cuadrada
-            float ySquare = amplitude2 * Mathf.Sign(Mathf.Sin(Tau * frequency2 * x + phase2 + (Time.timeSinceLevelLoad * movementSpeed)));
+            // Patrón cuadrado
+            float ySquare = 0f;
+            if (progress % squareWavePeriod < squareWavePeriod / 2)
+            {
+                ySquare = amplitude2 * Mathf.Sin(Tau * frequency2 * x + (Time.timeSinceLevelLoad * movementSpeed));
+            }
 
-            // Combinar la onda sinusoidal y la onda cuadrada
+            // Combinación de la onda larga y la onda cuadrada
             float y = ySin + ySquare;
 
             myLineRenderer.SetPosition(currentPoint, new Vector3(x, y, 0));
