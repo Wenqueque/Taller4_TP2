@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 935285681}
   - component: {fileID: 935285680}
   - component: {fileID: 935285685}
+  - component: {fileID: 935285686}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -827,7 +828,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935285679}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e723d80e7e62e4b930b87fe2568b3c, type: 3}
   m_Name: 
@@ -844,6 +845,27 @@ MonoBehaviour:
   parameterChangeSpeed: 1
   minPoints: 300
   maxPoints: 300
+--- !u!114 &935285686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935285679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7136e95261678aa439858328b71d417e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 935285683}
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 1
+  minFrequency: 0.1
+  maxFrequency: 2
+  frequencyDragMultiplier: 1
 --- !u!1 &1426970141
 GameObject:
   m_ObjectHideFlags: 0

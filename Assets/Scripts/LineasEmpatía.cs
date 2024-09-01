@@ -11,6 +11,16 @@ public class LineasEmpatía : MonoBehaviour
     public Vector2 xLimits = new Vector2(0, 1);
     public float movementSpeed = 1;
 
+    // Variables para ajustar la frecuencia con el arrastre
+    public float minFrequency = 0.1f;
+    public float maxFrequency = 5f;
+    public float frequencyDragMultiplier = 10f;
+
+    // Variables para ajustar la amplitud
+    public float minAmplitude = 0.1f;
+    public float maxAmplitude = 5f;
+    public float amplitudeChangeSpeed = 1f; // Velocidad del cambio de amplitud
+
     private EdgeCollider2D edgeCollider;
     private List<Vector2> linePoints = new List<Vector2>();
     private bool isCommonSineWave = false; // Para detectar si la línea ha cambiado
@@ -62,7 +72,7 @@ public class LineasEmpatía : MonoBehaviour
         {
             float progress = (float)currentPoint / (points - 1);
             float x = Mathf.Lerp(xStart, xFinish, progress);
-            float y = amplitude * Mathf.Sin(Tau * frequency * x);
+            float y = amplitude * Mathf.Sin(Tau * frequency * x + (Time.timeSinceLevelLoad * movementSpeed));
 
             myLineRenderer.SetPosition(currentPoint, new Vector3(x, y, 0));
             linePoints.Add(new Vector2(x, y));
@@ -74,6 +84,12 @@ public class LineasEmpatía : MonoBehaviour
 
     void Update()
     {
+        // Cambiar a una línea sinusoidal común cuando se hace clic
+        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+        {
+            isCommonSineWave = true;
+        }
+
         if (isCommonSineWave)
         {
             DrawSineWave();
@@ -83,10 +99,26 @@ public class LineasEmpatía : MonoBehaviour
             DrawSquareWave();
         }
 
-        // Cambiar a una línea sinusoidal común cuando se hace clic o se toca
-        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+        // Ajustar frecuencia con arrastre
+        if (Input.GetMouseButton(0) || Input.touchCount > 0)
         {
-            isCommonSineWave = true;
+            Vector2 touchPosition = Input.mousePosition;
+            // Convertir la posición del ratón o toque a la posición de la pantalla
+            float normalizedX = Mathf.InverseLerp(0, Screen.width, touchPosition.x);
+            float newFrequency = Mathf.Lerp(minFrequency, maxFrequency, normalizedX);
+
+            // Aplicar el nuevo valor de frecuencia solo si es la onda sinusoidal
+            if (isCommonSineWave)
+            {
+                frequency = newFrequency * frequencyDragMultiplier;
+            }
         }
+
+        // Leer valores del giroscopio para ajustar la amplitud
+        float gyroRotationY = Input.gyro.rotationRateUnbiased.y; // Obtener la rotación del giroscopio en el eje Y
+
+        // Convertir la rotación del giroscopio en un valor entre 0 y 1 (para interpolar entre min y max amplitud)
+        float normalizedRotation = Mathf.InverseLerp(-0.5f, 0.5f, gyroRotationY); // Ajustar el rango según sea necesario
+        amplitude = Mathf.Lerp(minAmplitude, maxAmplitude, normalizedRotation);
     }
 }
