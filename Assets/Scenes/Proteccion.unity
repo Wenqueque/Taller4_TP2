@@ -587,7 +587,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305327085}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad8d2715718b0dc4193520002ee00b59, type: 3}
   m_Name: 
@@ -755,7 +755,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLineRenderer: {fileID: 1305327089}
   increaseAmount: 0.08
-  increaseKey: 32
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 8
+  maxAmplitude0: 0.19
+  maxFrequency0: 1
+  maxMovementSpeed0: 7.71
+  points0: 300
+  maxAmplitude90: 0.1
+  maxFrequency90: 1.42
+  maxMovementSpeed90: 7.71
+  points90: 300
+  additionalMaxAmplitude90: 0.1
+  additionalMaxFrequency90: 0.5
+  additionalMaxMovementSpeed90: 7.71
+  additionalPoints90: 300
+  parameterChangeSpeed: 2.64
 --- !u!1 &1924934485
 GameObject:
   m_ObjectHideFlags: 0
