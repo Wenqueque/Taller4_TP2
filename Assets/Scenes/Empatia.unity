@@ -631,9 +631,7 @@ GameObject:
   - component: {fileID: 935285684}
   - component: {fileID: 935285683}
   - component: {fileID: 935285682}
-  - component: {fileID: 935285681}
   - component: {fileID: 935285680}
-  - component: {fileID: 935285685}
   - component: {fileID: 935285686}
   m_Layer: 0
   m_Name: SineWave_NARANJA
@@ -660,33 +658,6 @@ MonoBehaviour:
   zeroDegreesCutoffFrequency: 5000
   ninetyDegreesPitch: 1.5
   ninetyDegreesCutoffFrequency: 2000
---- !u!114 &935285681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935285679}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b603ec35ce8746043a9de024c7fd1188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 935285683}
-  points: 300
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 4.8
-  maxAmplitude0: 0.7
-  maxFrequency0: 0.9
-  maxMovementSpeed0: 2
-  points0: 300
-  maxAmplitude90: 1
-  maxFrequency90: 0.55
-  maxMovementSpeed90: 3.5
-  points90: 300
-  parameterChangeSpeed: 5
 --- !u!114 &935285682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,30 +792,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &935285685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935285679}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e723d80e7e62e4b930b87fe2568b3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 935285683}
-  points: 300
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 1
-  maxAmplitude: 2
-  maxFrequency: 2
-  maxMovementSpeed: 2
-  parameterChangeSpeed: 1
-  minPoints: 300
-  maxPoints: 300
 --- !u!114 &935285686
 MonoBehaviour:
   m_ObjectHideFlags: 0
