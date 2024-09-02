@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/soberbia_prueba.unity
     guid: 913f46e2432c88148b8efdad2dfd16bc
   - enabled: 1
+    path: Assets/Scenes/Empatia.unity
+    guid: 7bb6998b02890464ea41fc476c56fe0d
+  - enabled: 1
     path: Assets/Scenes/timidez.unity
     guid: 4b10aa89cbdf7714395db5e52c84ed55
   m_configObjects: {}

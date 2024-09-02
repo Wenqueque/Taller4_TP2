@@ -558,7 +558,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800247856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b603ec35ce8746043a9de024c7fd1188, type: 3}
   m_Name: 
@@ -613,13 +613,13 @@ MonoBehaviour:
   amplitude: 1
   frequency: 1
   xLimits: {x: 0, y: -12}
-  movementSpeed: 4.8
-  maxAmplitude0: 0.7
+  movementSpeed: 5
+  maxAmplitude0: 0.65
   maxFrequency0: 0.9
-  maxMovementSpeed0: 2
+  maxMovementSpeed0: 5
   points0: 300
-  maxAmplitude90: 1
-  maxFrequency90: 0.55
+  maxAmplitude90: 1.63
+  maxFrequency90: 1.52
   maxMovementSpeed90: 3.5
   points90: 300
   parameterChangeSpeed: 5
