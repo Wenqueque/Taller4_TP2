@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoberbiaArrastraryCambiarFrecuencia : MonoBehaviour
-
 {
     public LineRenderer myLineRenderer;
     public int points;
@@ -27,11 +26,15 @@ public class SoberbiaArrastraryCambiarFrecuencia : MonoBehaviour
     public float maxFrequencyDrag = 5f;
     public float minFrequencyDrag = 0.5f;
 
+    // Variable para suavizar el cambio de frecuencia
+    public float frequencyChangeSpeed = 1f;
+
     private EdgeCollider2D edgeCollider;
     private List<Vector2> linePoints = new List<Vector2>();
 
     private bool isDragging = false;
     private Vector3 lastMousePosition;
+    private float targetFrequency;
 
     void Start()
     {
@@ -95,8 +98,12 @@ public class SoberbiaArrastraryCambiarFrecuencia : MonoBehaviour
             Vector3 currentMousePosition = Input.mousePosition;
             float mouseDeltaY = currentMousePosition.y - lastMousePosition.y;
 
-            frequency += mouseDeltaY * Time.deltaTime * parameterChangeSpeed;
-            frequency = Mathf.Clamp(frequency, minFrequencyDrag, maxFrequencyDrag);
+            // Establecer el valor objetivo para la frecuencia
+            targetFrequency += mouseDeltaY * Time.deltaTime * parameterChangeSpeed;
+            targetFrequency = Mathf.Clamp(targetFrequency, minFrequencyDrag, maxFrequencyDrag);
+
+            // Suavizar el cambio de frecuencia
+            frequency = Mathf.Lerp(frequency, targetFrequency, Time.deltaTime * frequencyChangeSpeed);
 
             lastMousePosition = currentMousePosition;
         }

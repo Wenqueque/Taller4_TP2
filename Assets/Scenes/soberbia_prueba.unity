@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 132620375}
   - component: {fileID: 132620374}
   - component: {fileID: 132620379}
+  - component: {fileID: 132620381}
+  - component: {fileID: 132620380}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -321,6 +323,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeaa19b7d7e86e24c9528a12bb3df4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &132620380
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132620373}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &132620381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132620373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5da2ca150ec804c931e362e6e87261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipPath: 
 --- !u!1 &989861941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,15 +1243,16 @@ MonoBehaviour:
   movementSpeed: 5
   maxAmplitude0: 0.19
   maxFrequency0: 0.3
-  maxMovementSpeed0: 1
+  maxMovementSpeed0: 10
   points0: 300
   maxAmplitude90: 1.8
   maxFrequency90: 0.3
   maxMovementSpeed90: 2
   points90: 300
   parameterChangeSpeed: 5
-  maxFrequencyDrag: 0.7
-  minFrequencyDrag: 0.3
+  maxFrequencyDrag: 1.5
+  minFrequencyDrag: 1.5
+  frequencyChangeSpeed: 1
 --- !u!1 &2071059664
 GameObject:
   m_ObjectHideFlags: 0

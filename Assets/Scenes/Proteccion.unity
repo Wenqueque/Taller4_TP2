@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 1242302146}
   - component: {fileID: 1242302144}
   - component: {fileID: 1242302149}
+  - component: {fileID: 1242302150}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -488,6 +489,19 @@ MonoBehaviour:
   maxMovementSpeed90: 3.5
   points90: 300
   parameterChangeSpeed: 5
+--- !u!114 &1242302150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242302142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5da2ca150ec804c931e362e6e87261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: 7141c97e2ebc5b54081df627cb87d3da, type: 3}
 --- !u!1 &1305327085
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +515,9 @@ GameObject:
   - component: {fileID: 1305327088}
   - component: {fileID: 1305327086}
   - component: {fileID: 1305327091}
+  - component: {fileID: 1305327092}
+  - component: {fileID: 1305327093}
+  - component: {fileID: 1305327094}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -515,7 +532,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305327085}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -692,6 +709,47 @@ MonoBehaviour:
   additionalMaxMovementSpeed90: 7.71
   additionalPoints90: 300
   parameterChangeSpeed: 2.64
+--- !u!114 &1305327092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305327085}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5da2ca150ec804c931e362e6e87261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: c159141309383c040b3b6a997c0e08bb, type: 3}
+--- !u!114 &1305327093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305327085}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75dfb61e00de8048a56bdfb218504ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: c159141309383c040b3b6a997c0e08bb, type: 3}
+--- !u!114 &1305327094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305327085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41833c9ca968aa3469bc626dcdf55603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frecuenciaBase: 220
+  frecuenciaMinima: 100
+  clip1: {fileID: 8300000, guid: c159141309383c040b3b6a997c0e08bb, type: 3}
 --- !u!1 &1924934485
 GameObject:
   m_ObjectHideFlags: 0

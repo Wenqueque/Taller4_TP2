@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 730366281}
   - component: {fileID: 730366280}
   - component: {fileID: 730366279}
+  - component: {fileID: 730366284}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -620,6 +621,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &730366284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730366278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5da2ca150ec804c931e362e6e87261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: ebccf945073708f4798e3ea0fe64b798, type: 3}
 --- !u!1 &935285679
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +647,7 @@ GameObject:
   - component: {fileID: 935285682}
   - component: {fileID: 935285680}
   - component: {fileID: 935285686}
+  - component: {fileID: 935285687}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -822,6 +837,20 @@ MonoBehaviour:
   minFrequency: 0.1
   maxFrequency: 2
   frequencyDragMultiplier: 1
+--- !u!114 &935285687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935285679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13750aca83151b44b95e88bcfa67915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: b70a9058e87fbee4f8a71ebe47c54a78, type: 3}
+  clip2: {fileID: 8300000, guid: 3997fb91a759e1d4a9f6155efc3128d4, type: 3}
 --- !u!1 &1426970141
 GameObject:
   m_ObjectHideFlags: 0
