@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 623464910}
   - component: {fileID: 623464909}
   - component: {fileID: 623464913}
+  - component: {fileID: 623464914}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623464908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad8d2715718b0dc4193520002ee00b59, type: 3}
   m_Name: 
@@ -310,7 +311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623464908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6cb23ff087ab204ea4d5ed181eeefe8, type: 3}
   m_Name: 
@@ -321,6 +322,30 @@ MonoBehaviour:
   zeroDegreesCutoffFrequency: 5000
   ninetyDegreesPitch: 1.5
   ninetyDegreesCutoffFrequency: 2000
+--- !u!114 &623464914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d24e45695bc0f42b9de9132e3763f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 623464911}
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 5
+  maxAmplitude0: 0.4
+  maxAmplitude90: 0.04
+  parameterChangeSpeed: 0.8
+  minFrequency: 1
+  maxFrequency: 10
+  dragSensitivity: 0.1
 --- !u!1 &706678697
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +435,7 @@ GameObject:
   - component: {fileID: 800247861}
   - component: {fileID: 800247862}
   - component: {fileID: 800247863}
+  - component: {fileID: 800247864}
   m_Layer: 0
   m_Name: SineWave_NARANJA
   m_TagString: Untagged
@@ -603,7 +629,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800247856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 951501545b317a04b8412271d6c44a3d, type: 3}
   m_Name: 
@@ -623,6 +649,30 @@ MonoBehaviour:
   maxMovementSpeed90: 3.5
   points90: 300
   parameterChangeSpeed: 5
+--- !u!114 &800247864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800247856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9842a1b5ee9d6544e9a4d66b6fd391c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLineRenderer: {fileID: 800247859}
+  points: 300
+  amplitude: 1
+  frequency: 1
+  xLimits: {x: 0, y: -12}
+  movementSpeed: 5
+  maxAmplitude0: 0.65
+  maxAmplitude90: 0.9
+  parameterChangeSpeed: 5
+  minFrequency: 1
+  maxFrequency: 3
+  dragSensitivity: 0.1
 --- !u!1 &1008455070
 GameObject:
   m_ObjectHideFlags: 0
