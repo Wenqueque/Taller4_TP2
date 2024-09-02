@@ -6,9 +6,11 @@ public class ControlSonidoSimple : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private AudioSource audioSource;
+//    public  volumenBase VolumenBase;
+
 
     public string clipPath; // Ruta del clip en la carpeta Resources
-    private float volumenBase = 0.5f;
+    public float volumenBase = 0.5f;
     //private Vector2 startTouchPosition;
 
     void Start()

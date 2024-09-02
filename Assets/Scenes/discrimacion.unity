@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 1649813944}
   - component: {fileID: 1649813943}
   - component: {fileID: 1649813942}
+  - component: {fileID: 1649813947}
   m_Layer: 0
   m_Name: SineWave_CELESTE
   m_TagString: Untagged
@@ -778,6 +779,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1649813947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649813940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13750aca83151b44b95e88bcfa67915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: ec75f2393a0556948923199d671b8237, type: 3}
+  clip2: {fileID: 8300000, guid: 4344a7863fe1f4a4f869190971371332, type: 3}
 --- !u!1 &1775009991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1032,7 @@ GameObject:
   - component: {fileID: 2114687738}
   - component: {fileID: 2114687737}
   - component: {fileID: 2114687735}
+  - component: {fileID: 2114687740}
   m_Layer: 0
   m_Name: SineWave_ROSA
   m_TagString: Untagged
@@ -1194,6 +1210,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &2114687740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114687733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5da2ca150ec804c931e362e6e87261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipPath: Assets/Resources/discriminacion3_a3.wav
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

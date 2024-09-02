@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class ControlSonidoSimpleTouch : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
+     private LineRenderer lineRenderer;
     private AudioSource audioSource;
 
-    /*
-    public Color colorIzquierda = Color.blue; // Color cuando hay inclinación a la izquierda
-    public Color colorOriginal = Color.white; // Color cuando no hay inclinación
-    public Color colorDerecha = Color.yellow; // Color cuando hay inclinación a la derecha
-    */
-
+    public string clipPath; // Ruta del clip en la carpeta Resources
     private float volumenBase = 0.5f;
-    private Vector2 startTouchPosition;
+    //private Vector2 startTouchPosition;
 
-    public AudioClip clip1; 
+    private Vector2 startTouchPosition;
     private bool isTouching = false;
 
     void Start()
@@ -31,12 +26,16 @@ public class ControlSonidoSimpleTouch : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // Configurar el AudioSource con el clip de sonido deseado
-        audioSource.clip = Resources.Load<AudioClip>("empatia3_a3"); // Reemplaza "mediacion1_g3" con el nombre de tu archivo WAV
+        // Cargar el AudioClip desde la ruta especificada en Resources
+        AudioClip clip = Resources.Load<AudioClip>(clipPath);
 
-        if (audioSource.clip == null)
+        if (clip != null)
         {
-            Debug.LogError("No se pudo cargar el clip de audio 'mediacion1_g3'. Asegúrate de que el archivo está en la carpeta Resources y que el nombre es correcto.");
+            audioSource.clip = clip;
+        }
+        else
+        {
+            Debug.LogError("No se pudo cargar el clip de audio desde la ruta: " + clipPath);
             return;
         }
 

@@ -79,8 +79,12 @@ public class ControlSonidoComplejo : MonoBehaviour
                 // Guardar la posición inicial del toque
                 startTouchPosition = touch.position;
                 isTouching = true;
+
+                audioSource.clip = clip2; // Cambiar al nuevo clip
+                audioSource.Play(); // Reproducir el nuevo clip
+
             }
-            else if (touch.phase == TouchPhase.Moved && isTouching)
+            /*else if (touch.phase == TouchPhase.Moved && isTouching)
             {
                 // Calcular el cambio en la posición Y
                 float deltaY = touch.position.y - startTouchPosition.y;
@@ -90,12 +94,8 @@ public class ControlSonidoComplejo : MonoBehaviour
                 audioSource.pitch = Mathf.Clamp(1f + (deltaY / Screen.height), 0.5f, 2.0f);
 
                 // Cambiar el clip de audio si el dedo se mueve significativamente
-                if (Mathf.Abs(deltaY) > 50) // Puedes ajustar este umbral según sea necesario
-                {
-                    audioSource.clip = clip2; // Cambiar al nuevo clip
-                    audioSource.Play(); // Reproducir el nuevo clip
-                }
-            }
+                
+            }*/
             else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 // Reiniciar el estado de toque
