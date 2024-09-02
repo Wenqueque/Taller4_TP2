@@ -578,10 +578,6 @@ GameObject:
   - component: {fileID: 1649813944}
   - component: {fileID: 1649813943}
   - component: {fileID: 1649813942}
-  - component: {fileID: 1649813941}
-  - component: {fileID: 1649813947}
-  - component: {fileID: 1649813949}
-  - component: {fileID: 1649813948}
   m_Layer: 0
   m_Name: SineWave_CELESTE
   m_TagString: Untagged
@@ -589,30 +585,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1649813941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649813940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e723d80e7e62e4b930b87fe2568b3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1649813945}
-  points: 300
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 1
-  maxAmplitude: 2
-  maxFrequency: 2
-  maxMovementSpeed: 2
-  parameterChangeSpeed: 1
-  minPoints: 10
-  maxPoints: 100
 --- !u!114 &1649813942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,69 +778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1649813947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649813940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5deacc3e17a540545b537c648c4b256d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1649813945}
-  points: 15
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 1
---- !u!114 &1649813948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649813940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b603ec35ce8746043a9de024c7fd1188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1649813945}
-  points: 15
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 1
-  maxAmplitude0: 2
-  maxFrequency0: 2
-  maxMovementSpeed0: 2
-  points0: 10
-  maxAmplitude90: 1
-  maxFrequency90: 1
-  maxMovementSpeed90: 1
-  points90: 100
-  parameterChangeSpeed: 1
---- !u!114 &1649813949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649813940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff207ede9a700a4689fcf1a178d0b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 1649813945}
-  points: 15
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: 1}
-  movementSpeed: 1
 --- !u!1 &1775009991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1016,6 @@ GameObject:
   - component: {fileID: 2114687734}
   - component: {fileID: 2114687738}
   - component: {fileID: 2114687737}
-  - component: {fileID: 2114687736}
   - component: {fileID: 2114687735}
   m_Layer: 0
   m_Name: SineWave_ROSA
@@ -1241,38 +1149,6 @@ MonoBehaviour:
   frequency: 0.71
   xLimits: {x: 0, y: -12}
   movementSpeed: 4
---- !u!114 &2114687736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114687733}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8236e5fa448d3ff48b8957472ef7f1d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLineRenderer: {fileID: 2114687734}
-  increaseAmount: 0.08
-  points: 300
-  amplitude: 1
-  frequency: 1
-  xLimits: {x: 0, y: -12}
-  movementSpeed: 8
-  maxAmplitude0: 0.19
-  maxFrequency0: 1
-  maxMovementSpeed0: 7.71
-  points0: 300
-  maxAmplitude90: 0.1
-  maxFrequency90: 1.42
-  maxMovementSpeed90: 7.71
-  points90: 300
-  additionalMaxAmplitude90: 0.1
-  additionalMaxFrequency90: 0.5
-  additionalMaxMovementSpeed90: 7.71
-  additionalPoints90: 300
-  parameterChangeSpeed: 2.64
 --- !u!114 &2114687737
 MonoBehaviour:
   m_ObjectHideFlags: 0
